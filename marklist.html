@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Employee List</title>
+</head>
+<body>
+
+   <table border=1>
+      <thead>
+         <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Mobile No.</th>
+            <th>Salary</th>
+         </tr>
+      </thead>
+      <tbody>
+         {% for Employee in employees %}
+            <tr>
+               <td>{{ Employee.id }}</td>
+               <td>{{ Employee.name }}</td>
+               <td>{{ Employee.department }}</td>
+               <td>{{ Employee.mobile }}</td>
+               <td>{{ Employee.salary }}</td>
+            </tr>
+         {% endfor %}
+      </tbody>
+   </table>
+   <a href="/" style="text-decoration: none;"><button>Back</button></a>
+
+</body>
+</html>
